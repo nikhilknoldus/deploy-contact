@@ -1,0 +1,1 @@
+import {ContactConsumer} from './context';

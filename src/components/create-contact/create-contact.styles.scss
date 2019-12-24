@@ -1,0 +1,98 @@
+@import '../../assets/variables.scss';
+
+form {
+    max-width: 300px;
+    margin: 5% auto;
+}
+
+h1 {
+    font-weight: 100;
+    color: $white;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+p {
+    color: $danger;
+}
+
+p::before {
+    display: inline;
+}
+
+input {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid $drkGreen;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    background: $lgtGreen;
+    color: $gray;
+}
+
+label {
+    line-height: 2;
+    text-align: left;
+    display: block;
+    margin-bottom: 13px;
+    margin-top: 20px;
+    color: $white;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+input[type="submit"] {
+    background: $drkGreen;
+    color: $white;
+    text-transform: uppercase;
+    border: none;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 10px;
+}
+
+input[type="submit"]:hover {
+    background: $lgtrGreen;
+}
+
+input[type="button"]:active,
+input[type="submit"]:active {
+    transition: 0.3s all;
+    transform: translateY(3px);
+    border: 1px solid transparent;
+    opacity: 0.8;
+}
+
+input:disabled {
+    opacity: 0.4;
+}
+
+input[type="button"]:hover {
+    transition: 0.3s all;
+}
+
+input[type="button"],
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+
+.App {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-container {
+    overflow-y: auto;
+    height: 60vh;
+    width: 95%;
+    min-height: 60vh;
+    background: linear-gradient(90deg, $gradOne 0%, $gradTwo 47%, $black 100%);
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 3%;
+}

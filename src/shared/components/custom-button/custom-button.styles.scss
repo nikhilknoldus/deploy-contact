@@ -1,0 +1,22 @@
+@import '../../../assets//variables.scss';
+
+.custom-button {
+    width: auto;
+    line-height: 20px;
+    height: 32px;
+    background: linear-gradient(90deg, $gradOne 0%, $gradTwo 47%, $black 100%);
+    color: $white;
+    text-transform: initial;
+    font-size: 13px;
+    border: 2px solid $btnBorder;
+    cursor: pointer;
+    margin: 0 0px;
+
+    &.curved {
+        border-radius: 6px;
+    }
+
+    &.margined {
+        margin: 0 2px;
+    }
+}

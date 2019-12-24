@@ -1,0 +1,11 @@
+@import '../../assets/variables.scss';
+
+.contact-list {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.active-button {
+    box-shadow: 0px 7px 5px 1px $activeBtnBg;
+}
