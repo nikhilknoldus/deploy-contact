@@ -20,8 +20,7 @@ const App: React.FC = () => {
     <ErrorBoundary data-test="AppComponent">
       <ContactProvider
         value={[contactData, dispatchContact]}
-        data-test="AppContactProvider"
-      >
+        data-test="AppContactProvider">
         <div className="App">
           <ContactsNav />
           <Switch>

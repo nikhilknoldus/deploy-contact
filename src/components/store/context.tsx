@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 export interface IContactInterface {
     name: string;
@@ -7,7 +7,9 @@ export interface IContactInterface {
     favorite: boolean;
 }
 
-export const ContactContext = React.createContext<IContactInterface | null>(null);
+export const ContactContext = React.createContext<IContactInterface | null>(
+    null
+);
 
 export const ContactProvider: any = ContactContext.Provider;
 export const ContactConsumer = ContactContext.Consumer;

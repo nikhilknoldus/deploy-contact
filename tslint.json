@@ -19,6 +19,10 @@
         "object-literal-sort-keys": false,
         "no-duplicate-imports": true,
         "prefer-const": false,
+        "no-implicit-dependencies": [
+            true,
+            "dev"
+        ],
         "max-classes-per-file": {
             "options": [
                 2

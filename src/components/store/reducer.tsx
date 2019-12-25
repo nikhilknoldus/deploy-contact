@@ -58,7 +58,7 @@ function getStateFromLocalStorage() {
   if (!localStorage.getItem("contacts")) {
     saveInitialStateToLocalStorage();
   }
-GLOBAL_INITIAL_STATE = localStorage.getItem("contacts");
+  GLOBAL_INITIAL_STATE = localStorage.getItem("contacts");
 }
 
 getStateFromLocalStorage();
@@ -99,6 +99,5 @@ function getIndex(state: any, payload: any) {
       break;
     }
   }
-
   return index;
 }

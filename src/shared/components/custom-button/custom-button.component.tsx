@@ -7,7 +7,7 @@ interface IProps {
   buttonType?: string;
   otherProps?: any;
   margined?: any;
-  emitEvent?: () => Function;
+  emitEvent?: () => void;
 }
 
 const CustomButton: React.FC<IProps> = props => {
@@ -22,14 +22,11 @@ const CustomButton: React.FC<IProps> = props => {
   }
 
   return (
-    <button
-      data-test="customButton"
-      onClick={() => submitEvent()}
-      className={`${props.curved ? "curved" : ""} ${
-        props.margined ? "margined" : ""
-      } ${props.buttonType ? props.buttonType : ""}   custom-button`}
-      {...props.otherProps}
-    >
+    <button data-test="customButton" onClick={() => submitEvent()}
+      className={`${props.curved ? "curved" : ""} 
+      ${props.margined ? "margined" : ""} 
+      ${props.buttonType ? props.buttonType : ""}   custom-button`}
+      {...props.otherProps}>
       {props.children}
     </button>
   );
