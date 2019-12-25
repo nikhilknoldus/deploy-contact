@@ -2,7 +2,6 @@
   "name": "contact",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://nikhilknoldus.github.io/fm-contacts_app/contact",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
@@ -30,9 +29,7 @@
     "storybook": "start-storybook -p 6006 -c .storybook",
     "build-storybook": "build-storybook -s public",
     "lint": "tslint -c tslint.json src/**/*.{ts,tsx} --format verbose",
-    "format": "prettier --write README.md src/**/*.{ts,tsx,html,scss,css}",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "format": "prettier --write README.md src/**/*.{ts,tsx,html,scss,css}"
   },
   "husky": {
     "hooks": {
