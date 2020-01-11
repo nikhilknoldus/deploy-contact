@@ -1,14 +1,10 @@
 pipeline {
    agent any
-   
-     environment {
-        GIT_REPO_PATH = 'https://github.com/nikhilknoldus/deploy-contact'
-    }
-   
+    
    stages {
     stage('git clone') {
         steps {
-            git credentialsId: 'gitrepo', url: "${GIT_REPO_PATH}"
+            git 'https://github.com/nikhilknoldus/deploy-contact'
         }
     }
 
