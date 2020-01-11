@@ -1,6 +1,5 @@
 pipeline {
    agent any
-    
    stages {
     stage('git clone') {
         steps {
@@ -10,7 +9,7 @@ pipeline {
 
      stage('create docker image') {
          steps {
-            sh 'sudo docker build -t a1 .'
+            sh 'docker build -t a1 .'
          }
     }
 
