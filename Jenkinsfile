@@ -1,11 +1,28 @@
-node{
-stage('SCM Checkout'){
-git 'https://github.com/nikhilknoldus/deploy-contact'
+pipeline {
+   agent any
+   
+     environment {
+        GIT_REPO_PATH = 'https://github.com/nikhilknoldus/deploy-contact'
+    }
+   
+   stages {
+    stage('git clone') {
+        steps {
+            git credentialsId: 'gitrepo', url: "${GIT_REPO_PATH}"
+        }
+    }
+
+     stage('create docker image') {
+         steps {
+            sh 'docker build -t a1 .'
+         }
+    }
+
+    stage('docker run') {
+        steps {          
+            sh 'docker run -d -p 3000:3000 a1'
+        }
+    }
+ }
 }
-stage('install packages'){
-sh 'npm install'
-}
-stage('build project'){
-sh 'npm start'
-}
-}
+
