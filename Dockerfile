@@ -1,6 +1,6 @@
 FROM node:10
 
-COPY ./frontend/xt-app/package*.json ./
+COPY ./package*.json ./
 
 RUN npm init -y
 RUN npm install
