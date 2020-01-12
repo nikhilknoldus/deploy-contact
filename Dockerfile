@@ -2,8 +2,7 @@ FROM node:10
 
 COPY ./package*.json ./
 
-RUN npm init -y
-RUN npm install
+RUN npm update
 
 COPY . .
 
