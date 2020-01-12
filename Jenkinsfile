@@ -9,13 +9,13 @@ pipeline {
 
      stage('create docker image') {
          steps {
-            sh 'docker build -t a1 .'
+            sh 'sudo docker build -t a1 .'
          }
     }
 
     stage('docker run') {
         steps {          
-            sh 'docker run -d -p 3000:3000 a1'
+            sh 'sudo docker run -d -p 3000:3000 a1'
         }
     }
  }
